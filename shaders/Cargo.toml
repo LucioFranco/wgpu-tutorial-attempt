@@ -1,0 +1,14 @@
+[package]
+authors = [""]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+name = "shaders"
+publish = false
+version = "0.1.0"
+
+[lib]
+crate-type = ["lib", "dylib"]
+
+[dependencies]
+bytemuck = {version = "1.6", features = ["derive"]}
+spirv-std = {git = "https://github.com/EmbarkStudios/rust-gpu", features = ["glam"]}

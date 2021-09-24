@@ -1,0 +1,24 @@
+[package]
+edition = "2018"
+name = "craft"
+resolver = "2"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+bytemuck = {version = "1", features = ["derive"]}
+cgmath = "*"
+env_logger = "*"
+glam = {version = "0.18", features = ["bytemuck"]}
+image = "*"
+log = "*"
+tobj = "*"
+tokio = {version = "1", features = ["rt", "macros"]}
+wgpu = {version = "0.10", features = ["spirv"]}
+winit = "*"
+
+[build-dependencies]
+fs_extra = "*"
+spirv-builder = {git = "https://github.com/EmbarkStudios/rust-gpu"}
